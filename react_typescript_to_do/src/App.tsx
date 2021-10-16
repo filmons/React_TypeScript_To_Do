@@ -1,14 +1,35 @@
-import React from 'react';
-
+import React, {FC} from 'react';
 import './App.css';
 
-function App() {
+
+
+
+const App: FC  = ()  =>{
   return (
     <div className="App">
-      <header >
-       <div className=""></div>
-       <div className=""></div>
-      </header>
+      <div className="header">
+        <div className="inputContainer">
+          <input
+            type="text"
+            placeholder="Task..."
+            name="task"
+            
+          />
+          <input
+            type="number"
+            placeholder="Deadline (in Days)..."
+            name="deadline"
+            
+            
+          />
+        </div>
+        <button >Add Task</button>
+      </div>
+      <div className="todoList">
+        {/* {todoList.map((task: ITask, key: number) => {
+          return <TodoTask key={key} task={task} completeTask={completeTask} />;
+        })} */}
+      </div>
     </div>
   );
 }
